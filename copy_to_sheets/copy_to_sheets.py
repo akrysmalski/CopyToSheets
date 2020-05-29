@@ -108,7 +108,7 @@ class LocalSpreadsheet:
         self._dataframes = self.load_dataframes()
 
     def __str__(self):
-        return self.dataframe.__str__()
+        return self._dataframes[self.active_sheet].__str__()
 
     @property
     def dataframe(self):
